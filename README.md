@@ -1,6 +1,11 @@
 # QuickNotes
 A simple Sticky Notes substitutes made with GTK and Python
 
+## Screenshots
+![image](https://user-images.githubusercontent.com/108143702/177193502-9734d9fc-6686-43bf-b726-2b3554d89c83.png)
+![image](https://user-images.githubusercontent.com/108143702/177193584-3b9de1ef-867d-4993-a5a5-b21e10cb1242.png)
+A minimalistic clutter-free interface to allow you to focus on what's important.
+
 ## Installation
 ### Linux
 #### Download Executable
