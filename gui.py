@@ -87,7 +87,8 @@ class Window(Gtk.Window):
             label.props.halign = 0
             label.props.valign = 2
             self.vbox.add(label)
-            label2 = Gtk.Label(label="\nClick the button on the top left or", valign=0)
+            # label2 = Gtk.Label(label="\nClick the button on the top left or", valign=0)
+            label2 = Gtk.Label(label="\nClick the button on the top left to add one", valign=0)
             label2.set_vexpand = True
             label2.set_hexpand = True
             label2.props.halign = 0
