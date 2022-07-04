@@ -38,7 +38,7 @@ class Window(Gtk.Window):
         self.set_border_width(10)
         window_icon = self.render_icon("quicknotes_icon.png", Gtk.IconSize.MENU)
         self.set_icon(window_icon)
-        self.connect("key-press-event", self.key_press)
+        # self.connect("key-press-event", self.key_press)
 
         self.scrolled_window = Gtk.ScrolledWindow()
         self.scrolled_window.set_hexpand(True)
@@ -98,7 +98,7 @@ class Window(Gtk.Window):
             label3.set_hexpand = True
             label3.props.halign = 0
             label2.props.valign = 2
-            self.vbox.add(label3)
+            # self.vbox.add(label3)
             self.show_all()
 
         for x in enumerate(self.notes):
