@@ -7,10 +7,13 @@ import platform
 home_dir = os.environ["HOME"]
 
 if platform.system() == "Linux" or platform.system() == "Darwin":
-    db_path = home_dir + ".config/quicknotes/notes.db"
+    os.system(f"mkdir {home_dir}/.config/quicknotes/")
+    db_path = home_dir + "/.config/quicknotes/notes.db"
 
 if platform.system() == "Windows":
-    db_path = home_dir + ".quicknotes/notes.db"
+    os.system(f"mkdir {home_dir}/.quicknotes/")
+    db_path = home_dir + "/.quicknotes/notes.db"
+
 
 connection = sql.Connection(db_path)
 cursor = connection.cursor()
