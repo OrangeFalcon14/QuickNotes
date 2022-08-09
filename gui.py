@@ -123,6 +123,14 @@ class Window(Gtk.Window):
             self.show_all()
 
     def delete_note(self, dummy, index):
+        dialog = Gtk.MessageDialog(text="Are you sure you want to delete this note?", message_type=Gtk.MessageType.QUESTION)
+        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, Gtk.STOCK_OK, Gtk.ResponseType.OK)
+        response = dialog.run()
+        dialog.set_transient_for(self)
+        dialog.destroy()
+        dialog.set_destroy_with_parent(True)
+        if response == Gtk.ResponseType.CANCEL:
+            return
         self.notes = db.get_notes()
         db.delete_record(index + 1)
         db.write_new_note_numbers()
